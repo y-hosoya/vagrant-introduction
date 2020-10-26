@@ -1,3 +1,0 @@
-# mkdocs
-
-Hello mkdocs.

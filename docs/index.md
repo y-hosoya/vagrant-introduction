@@ -1,3 +1,1 @@
-# Template mkdocs
-
-This site is template for mkdocs.
+# Vagrant入門
