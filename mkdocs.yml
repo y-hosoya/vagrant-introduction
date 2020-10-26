@@ -1,0 +1,27 @@
+markdown_extensions:
+  - 'meta'
+  - 'pymdownx.mark'
+  - 'pymdownx.magiclink'
+  - 'pymdownx.emoji'
+  - 'pymdownx.keys'
+  - 'def_list'
+  - 'admonition'
+  - codehilite:
+      linenums: true
+      use_pygments: true
+
+nav:
+  - Home: 'index.md'
+  - About:
+    - mkdocs: 'mkdocs/index.md'
+
+site_name: 'Template mkdocs'
+
+theme:
+  feature:
+    tabs: true
+  language: 'ja'
+  name: 'material'
+  palette:
+    accent: 'Ocean'
+    primary: 'blue'
