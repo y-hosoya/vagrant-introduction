@@ -12,10 +12,10 @@ markdown_extensions:
 
 nav:
   - Home: 'index.md'
-  - About:
-    - mkdocs: 'mkdocs/index.md'
+  - はじめに:
+    - vagrantとは: 'intro/vagrant.md'
 
-site_name: 'Template mkdocs'
+site_name: 'Vagrant Introduction'
 
 theme:
   feature:
