@@ -14,6 +14,15 @@ nav:
   - Home: 'index.md'
   - はじめに:
     - vagrantとは: 'intro/vagrant.md'
+    - インストール: 'intro/install.md'
+  - 使ってみる:
+    - 準備: 'use/init.md'
+    - 作成/削除: 'use/up_destroy.md'
+    - box: 'use/box.md'
+  - Vagrantfileの活用:
+    - ネットワーク: 'vagrantfile/network.md'
+    - ファイル共有: 'vagrantfile/sync.md'
+    - プロビジョニング: 'vagrantfile/provision.md'
 
 site_name: 'Vagrant Introduction'
 
