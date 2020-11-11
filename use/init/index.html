@@ -13,7 +13,7 @@
     
     
       
-        <title>vagrantとは - Vagrant Introduction</title>
+        <title>準備 - Vagrant Introduction</title>
       
     
     
@@ -59,11 +59,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#vagrant" class="md-skip">
-          コンテンツにスキップ
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -90,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              vagrantとは
+              準備
             
           </span>
         </div>
@@ -174,12 +169,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       はじめに
@@ -197,89 +190,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        vagrantとは
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../intro/vagrant/" class="md-nav__link">
       vagrantとは
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    メリット
-  </a>
-  
-    <nav class="md-nav" aria-label="メリット">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cli" class="md-nav__link">
-    仮想化ソフトをCLIで操作できる
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    環境構築の自動化
-  </a>
-  
-    <nav class="md-nav" aria-label="環境構築の自動化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_1" class="md-nav__link">
-    Vagrantを使用しない場合
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_2" class="md-nav__link">
-    Vagrantを使用した場合
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -289,7 +204,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../install/" class="md-nav__link">
+    <a href="../../intro/install/" class="md-nav__link">
       インストール
     </a>
   </li>
@@ -304,10 +219,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       使ってみる
@@ -325,11 +242,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../use/init/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       準備
     </a>
+    
   </li>
 
         
@@ -339,7 +263,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use/up_destroy/" class="md-nav__link">
+    <a href="../up_destroy/" class="md-nav__link">
       作成/削除
     </a>
   </li>
@@ -351,7 +275,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../use/box/" class="md-nav__link">
+    <a href="../box/" class="md-nav__link">
       box
     </a>
   </li>
@@ -431,114 +355,15 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    メリット
-  </a>
-  
-    <nav class="md-nav" aria-label="メリット">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cli" class="md-nav__link">
-    仮想化ソフトをCLIで操作できる
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    環境構築の自動化
-  </a>
-  
-    <nav class="md-nav" aria-label="環境構築の自動化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_1" class="md-nav__link">
-    Vagrantを使用しない場合
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_2" class="md-nav__link">
-    Vagrantを使用した場合
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <h1 id="vagrant">Vagrantとは</h1>
-<p>VagrantはVirtualBoxなどを利用した仮想環境を作るソフトウェアです。</p>
-<h2 id="_1">メリット</h2>
-<p>Vagrantを使用することで以下のメリットが上げられます。</p>
-<ul>
-<li>仮想化ソフトをCLIで操作できる</li>
-<li>環境をソースコードで保持できる(IaC)</li>
-<li>コマンド１つで環境構築が完了し、自動化が実現できる</li>
-</ul>
-<h3 id="cli">仮想化ソフトをCLIで操作できる</h3>
-<p>まず、VagrantはWindows/Mac/Linuxなど様々なOSで使用することが出来ます。<br />
-Vagrantを使用することで、仮想化ソフトをCLIで操作することが可能になります。</p>
-<p>VirtualBox/VMWare/libvert/Openstackなど様々なプラットフォームに対応しています。</p>
-<h3 id="_2">環境構築の自動化</h3>
-<p>例えば、WindowsでVirtualBoxを使用してCentOSを作成する場合、以下のような構成になります。</p>
-<h4 id="vagrant_1">Vagrantを使用しない場合</h4>
-<p><img alt="env.svg" src="../img/env.svg" /></p>
-<p>以下の手順を手動で実施して仮想マシンを構築する必要があります。</p>
-<ol>
-<li>OSのISOイメージをWindowsにDL</li>
-<li>VirtualBoxを操作してISOイメージの読み込み</li>
-<li>OS定義(CPU,Memory,Hostname,Timezone...)</li>
-<li>OS起動</li>
-<li>ミドルウェアの構築</li>
-</ol>
-<h4 id="vagrant_2">Vagrantを使用した場合</h4>
-<p><img alt="vagrant_env.svg" src="../img/vagrant_env.svg" /></p>
-<p>Vagrantを使用することで、以下の手順を実施するだけで自動で仮想マシンが構築されます。</p>
-<ol>
-<li><code>Vagrantfile</code>を用意する</li>
-<li><code>vagrant up</code>コマンドを実行する</li>
-</ol>
+                  <h1>準備</h1>
+                
+                
                 
               
               
@@ -557,7 +382,7 @@ Vagrantを使用することで、仮想化ソフトをCLIで操作すること�
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../.." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../intro/install/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -566,19 +391,19 @@ Vagrantを使用することで、仮想化ソフトをCLIで操作すること�
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Home
+                インストール
               </div>
             </div>
           </a>
         
         
-          <a href="../install/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../up_destroy/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                インストール
+                作成/削除
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

@@ -13,7 +13,7 @@
     
     
       
-        <title>vagrantとは - Vagrant Introduction</title>
+        <title>インストール - Vagrant Introduction</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vagrant" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              vagrantとは
+              インストール
             
           </span>
         </div>
@@ -197,6 +197,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../vagrant/" class="md-nav__link">
+      vagrantとは
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -208,12 +220,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        vagrantとは
+        インストール
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      vagrantとは
+      インストール
     </a>
     
       
@@ -230,49 +242,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    メリット
-  </a>
-  
-    <nav class="md-nav" aria-label="メリット">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cli" class="md-nav__link">
-    仮想化ソフトをCLIで操作できる
+  <a href="#virtualbox" class="md-nav__link">
+    VirtualBoxインストール
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    環境構築の自動化
+      
+        <li class="md-nav__item">
+  <a href="#vagrant" class="md-nav__link">
+    Vagrantインストール
   </a>
-  
-    <nav class="md-nav" aria-label="環境構築の自動化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_1" class="md-nav__link">
-    Vagrantを使用しない場合
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_2" class="md-nav__link">
-    Vagrantを使用した場合
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -280,18 +259,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../install/" class="md-nav__link">
-      インストール
-    </a>
   </li>
 
         
@@ -448,49 +415,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    メリット
-  </a>
-  
-    <nav class="md-nav" aria-label="メリット">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cli" class="md-nav__link">
-    仮想化ソフトをCLIで操作できる
+  <a href="#virtualbox" class="md-nav__link">
+    VirtualBoxインストール
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    環境構築の自動化
+      
+        <li class="md-nav__item">
+  <a href="#vagrant" class="md-nav__link">
+    Vagrantインストール
   </a>
-  
-    <nav class="md-nav" aria-label="環境構築の自動化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_1" class="md-nav__link">
-    Vagrantを使用しない場合
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vagrant_2" class="md-nav__link">
-    Vagrantを使用した場合
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -507,38 +441,32 @@
               
                 
                 
-                <h1 id="vagrant">Vagrantとは</h1>
-<p>VagrantはVirtualBoxなどを利用した仮想環境を作るソフトウェアです。</p>
-<h2 id="_1">メリット</h2>
-<p>Vagrantを使用することで以下のメリットが上げられます。</p>
-<ul>
-<li>仮想化ソフトをCLIで操作できる</li>
-<li>環境をソースコードで保持できる(IaC)</li>
-<li>コマンド１つで環境構築が完了し、自動化が実現できる</li>
-</ul>
-<h3 id="cli">仮想化ソフトをCLIで操作できる</h3>
-<p>まず、VagrantはWindows/Mac/Linuxなど様々なOSで使用することが出来ます。<br />
-Vagrantを使用することで、仮想化ソフトをCLIで操作することが可能になります。</p>
-<p>VirtualBox/VMWare/libvert/Openstackなど様々なプラットフォームに対応しています。</p>
-<h3 id="_2">環境構築の自動化</h3>
-<p>例えば、WindowsでVirtualBoxを使用してCentOSを作成する場合、以下のような構成になります。</p>
-<h4 id="vagrant_1">Vagrantを使用しない場合</h4>
-<p><img alt="env.svg" src="../img/env.svg" /></p>
-<p>以下の手順を手動で実施して仮想マシンを構築する必要があります。</p>
-<ol>
-<li>OSのISOイメージをWindowsにDL</li>
-<li>VirtualBoxを操作してISOイメージの読み込み</li>
-<li>OS定義(CPU,Memory,Hostname,Timezone...)</li>
-<li>OS起動</li>
-<li>ミドルウェアの構築</li>
-</ol>
-<h4 id="vagrant_2">Vagrantを使用した場合</h4>
-<p><img alt="vagrant_env.svg" src="../img/vagrant_env.svg" /></p>
-<p>Vagrantを使用することで、以下の手順を実施するだけで自動で仮想マシンが構築されます。</p>
-<ol>
-<li><code>Vagrantfile</code>を用意する</li>
-<li><code>vagrant up</code>コマンドを実行する</li>
-</ol>
+                <h1 id="_1">インストール</h1>
+<p>Vagrantを使用するためには、仮想化ソフトウェアがインストールされている必要があります。</p>
+<p>ここでは、Windows10にVirtualBoxとVagrantをインストールします。</p>
+<h2 id="virtualbox">VirtualBoxインストール</h2>
+<p>以下のページから、使用するOS種類を選択してインストールします。<br />
+<a href="https://www.virtualbox.org/wiki/Downloads">Downloads – Oracle VM VirtualBox</a></p>
+<p>インストールが完了したら<strong>PowerShell</strong>で以下のコマンドを実行します。
+バージョンが表示され、無事にインストールされていることを確認します。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01&gt; cd &#39;C:\Program Files\Oracle\VirtualBox\&#39;</span>
+<span class="go">PS C:\Program Files\Oracle\VirtualBox&gt; .\VBoxManage.exe --version</span>
+<span class="go">6.1.14r140239</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="vagrant">Vagrantインストール</h2>
+<p>以下のページから、使用するOS種類を選択してインストールします。<br />
+<a href="https://www.vagrantup.com/downloads">Downloads | Vagrant by HashiCorp</a></p>
+<p>インストールが完了したら<strong>PowerShell</strong>で以下のコマンドを実行します。
+バージョンが表示され、無事にインストールされていることを確認します。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Program Files\Oracle\VirtualBox&gt; vagrant --version</span>
+<span class="go">Vagrant 2.2.10</span>
+</code></pre></div>
+</td></tr></table>
+<p>以上でVagrantを使用する準備が完了しました。</p>
                 
               
               
@@ -557,7 +485,7 @@ Vagrantを使用することで、仮想化ソフトをCLIで操作すること�
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../.." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../vagrant/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -566,19 +494,19 @@ Vagrantを使用することで、仮想化ソフトをCLIで操作すること�
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Home
+                vagrantとは
               </div>
             </div>
           </a>
         
         
-          <a href="../install/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../use/init/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                インストール
+                準備
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
