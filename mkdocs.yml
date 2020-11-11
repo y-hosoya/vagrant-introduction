@@ -16,9 +16,9 @@ nav:
     - vagrantとは: 'intro/vagrant.md'
     - インストール: 'intro/install.md'
   - 使ってみる:
-    - 準備: 'use/init.md'
-    - 作成/削除: 'use/up_destroy.md'
-    - box: 'use/box.md'
+    - 準備: 'how_to_use/preparation.md'
+    - VM作成: 'how_to_use/create.md'
+    - OS一覧: 'how_to_use/box.md'
   - Vagrantfileの活用:
     - ネットワーク: 'vagrantfile/network.md'
     - ファイル共有: 'vagrantfile/sync.md'
