@@ -13,7 +13,7 @@
     
     
       
-        <title>box - Vagrant Introduction</title>
+        <title>OS一覧 - Vagrant Introduction</title>
       
     
     
@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#os" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              box
+              OS一覧
             
           </span>
         </div>
@@ -244,7 +249,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../init/" class="md-nav__link">
+    <a href="../preparation/" class="md-nav__link">
       準備
     </a>
   </li>
@@ -256,8 +261,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../up_destroy/" class="md-nav__link">
-      作成/削除
+    <a href="../create/" class="md-nav__link">
+      VM作成
     </a>
   </li>
 
@@ -273,10 +278,54 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        OS一覧
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      box
+      OS一覧
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vagrant-box" class="md-nav__link">
+    Vagrant Box
+  </a>
+  
+    <nav class="md-nav" aria-label="Vagrant Box">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exmaple" class="md-nav__link">
+    Exmaple
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -355,15 +404,103 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vagrant-box" class="md-nav__link">
+    Vagrant Box
+  </a>
+  
+    <nav class="md-nav" aria-label="Vagrant Box">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exmaple" class="md-nav__link">
+    Exmaple
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>box</h1>
-                
-                
+                <h1 id="os">OS一覧</h1>
+<p>Vagrantでは様々なOSの仮想マシンを作成することが出来ます。</p>
+<h2 id="vagrant-box">Vagrant Box</h2>
+<p>使用できる仮想マシンのテンプレートを<strong>Box</strong>と呼びます。<br />
+<code>Vagrantfile</code>にBoxの名前を記載することで、使用するBoxを指定します。</p>
+<p><a href="https://app.vagrantup.com/boxes/search">Vagrant Cloud</a>から、任意のBoxを検索することが出来ます。</p>
+<h3 id="exmaple">Exmaple</h3>
+<p><a href="../preparation">準備</a>で使用した<strong>generic/centos8</strong>のページを確認してみます。<br />
+<a href="https://app.vagrantup.com/generic/boxes/centos8">Vagrant box generic/centos8 - Vagrant Cloud</a></p>
+<p><strong>Vagrantfile</strong>のタブには以下が記載されています。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.box = &quot;generic/centos8&quot;</span>
+<span class="err">end</span>
+</code></pre></div>
+</td></tr></table>
+<p>上記の<code>Vagrantfile</code>を作成して作業ディレクトリに配置し、<code>vagrant up</code>を実行することでVMを作成することが出来ます。</p>
+<p><strong>New</strong>のタブには以下が記載されています。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>vagrant init generic/centos8
+vagrant up
+</code></pre></div>
+</td></tr></table>
+<p><code>vagrant init</code>を実行すると、引き数として実行されたBoxを<strong>Vagrant Cloud</strong>へ探し、<br />
+それに該当する<code>Vagrantfile</code>(<strong>Vagrantfile</strong>のタブのもの)が作成されます。</p>
+<hr />
+<p>また、Boxの詳細バージョンを指定する事もできます。<br />
+<strong>v3.1.4</strong>をクリックして指定バージョンのページに移動すると、Vagrantfileとコマンドに追加された項目があります。<br />
+この追加行によってバージョンを指定することが可能です。</p>
+<p><strong>Vagrantfile</strong>タブ</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.box = &quot;generic/centos8&quot;</span>
+<span class="err">  config.vm.box_version = &quot;3.1.4&quot; # 追加された行</span>
+<span class="err">end</span>
+</code></pre></div>
+</td></tr></table>
+<p><strong>New</strong>タブ</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>vagrant init generic/centos8 <span class="se">\</span>
+  --box-version <span class="m">3</span>.1.4 <span class="c1"># 追加された行</span>
+vagrant up
+</code></pre></div>
+</td></tr></table>
                 
               
               
@@ -382,7 +519,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../up_destroy/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../create/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -391,7 +528,7 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                作成/削除
+                VM作成
               </div>
             </div>
           </a>

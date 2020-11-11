@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -249,10 +254,48 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        準備
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       準備
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    作業ディレクトリ作成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ディレクトリの初期化
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -263,8 +306,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../up_destroy/" class="md-nav__link">
-      作成/削除
+    <a href="../create/" class="md-nav__link">
+      VM作成
     </a>
   </li>
 
@@ -276,7 +319,7 @@
 
   <li class="md-nav__item">
     <a href="../box/" class="md-nav__link">
-      box
+      OS一覧
     </a>
   </li>
 
@@ -355,15 +398,135 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    作業ディレクトリ作成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ディレクトリの初期化
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>準備</h1>
-                
-                
+                <h1 id="_1">準備</h1>
+<p>Vagrantでは、作成する仮想マシンをディレクトリに分けて管理することが出来ます。<br />
+ディレクトリに配置された<code>Vagrantfile</code>を参照し、記載されている仮想マシンの定義/起動/構築を行います。</p>
+<h2 id="_2">作業ディレクトリ作成</h2>
+<p>以下の例では、ホームディレクトリに移動して<code>vagrant_test</code>という名前でディレクトリを作成します。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01&gt; mkdir vagrant_test</span>
+
+
+<span class="go">    ディレクトリ: C:\Users\user01</span>
+
+
+<span class="go">Mode                LastWriteTime         Length Name</span>
+<span class="go">----                -------------         ------ ----</span>
+<span class="go">d-----       2020/11/11     13:10                vagrant_test</span>
+</code></pre></div>
+</td></tr></table>
+<p>作成したディレクトリに移動します。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01&gt; cd vagrant_test</span>
+<span class="go">PS C:\Users\user01\vagrant_test&gt;</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_3">ディレクトリの初期化</h2>
+<p><code>vagrant init &lt;作成したいOS(Box)&gt;</code>コマンドを実行することで、<code>Vagrantfile</code>を作成することができます。<br />
+以下ではCentOS8の<code>Vagrantfile</code>を作成しています。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01\vagrant_test&gt; vagrant init generic/centos8</span>
+<span class="go">==&gt; vagrant: A new version of Vagrant is available: 2.2.13 (installed version: 2.2.10)!</span>
+<span class="go">==&gt; vagrant: To upgrade visit: https://www.vagrantup.com/downloads.html</span>
+
+<span class="go">A `Vagrantfile` has been placed in this directory. You are now</span>
+<span class="go">ready to `vagrant up` your first virtual environment! Please read</span>
+<span class="go">the comments in the Vagrantfile as well as documentation on</span>
+<span class="go">`vagrantup.com` for more information on using Vagrant.</span>
+</code></pre></div>
+</td></tr></table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a href="https://app.vagrantup.com/boxes/search?utf8=%E2%9C%93&amp;sort=downloads&amp;provider=&amp;q=">こちら</a>から使用したいイメージを選ぶ事が出来ます。(詳細は後述)</p>
+</div>
+<p><code>Vagrantfile</code>が作成されたことを確認します。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01\vagrant_test&gt; ls</span>
+
+
+<span class="go">    ディレクトリ: C:\Users\user01\vagrant_test</span>
+
+
+<span class="go">Mode                LastWriteTime         Length Name</span>
+<span class="go">----                -------------         ------ ----</span>
+<span class="go">-a----       2020/11/11     13:17           3091 Vagrantfile</span>
+</code></pre></div>
+</td></tr></table>
+<p>以上でVMを作成する準備が出来ました。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>上記ではCentOS8を使用しましたが、<a href="https://app.vagrantup.com/boxes/search">こちら</a>から使用するOSを検索できます(詳細は<a href="../box/">OS一覧</a>ページ参照)</li>
+<li><code>vagrant init</code>コマンドは、<code>Vagrantfile</code>のみを作成するものです。<ul>
+<li>Memory,IPアドレス,ホスト名などを指定する場合は、<code>Vagranfile</code>を編集することで指定のVM作成が可能です(詳細はvagrantfileページ参照)</li>
+<li>GitHubなどで既に<code>Vagrantfile</code>が用意されている場合は実施する必要はありません(詳細はvagrantfileページ参照)</li>
+</ul>
+</li>
+</ul>
+</div>
                 
               
               
@@ -397,13 +560,13 @@
           </a>
         
         
-          <a href="../up_destroy/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../create/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                作成/削除
+                VM作成
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
