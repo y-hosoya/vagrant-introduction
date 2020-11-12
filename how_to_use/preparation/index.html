@@ -356,6 +356,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../vagrantfile/vagrantfile/" class="md-nav__link">
+      Vagrantfileとは
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../vagrantfile/network/" class="md-nav__link">
       ネットワーク
     </a>
@@ -481,7 +493,7 @@
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01\vagrant_test&gt; vagrant init generic/centos8</span>
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01\vagrant_test&gt; vagrant init generic/centos8 --minimal</span>
 <span class="go">==&gt; vagrant: A new version of Vagrant is available: 2.2.13 (installed version: 2.2.10)!</span>
 <span class="go">==&gt; vagrant: To upgrade visit: https://www.vagrantup.com/downloads.html</span>
 
@@ -493,18 +505,26 @@
 </td></tr></table>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><a href="https://app.vagrantup.com/boxes/search?utf8=%E2%9C%93&amp;sort=downloads&amp;provider=&amp;q=">こちら</a>から使用したいイメージを選ぶ事が出来ます。(詳細は後述)</p>
+<p>上記のコマンドは<code>--minimal</code>をオプションを付けて実行しています。<br />
+オプション無しで実行した場合は、コメントアウトで<code>Vagrantfile</code>の使い方が記載されたファイルが作成されます。
+(行数が多いので割愛。)<br />
+<code>Vagrantfile</code>の詳細は<a href="../../vagrantfile/vagrantfile">Vagrantfileとは</a>を参してください。</p>
 </div>
 <p><code>Vagrantfile</code>が作成されたことを確認します。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01\vagrant_test&gt; ls</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01\vagrant_test&gt; ls</span>
 
 
 <span class="go">    ディレクトリ: C:\Users\user01\vagrant_test</span>
@@ -513,6 +533,11 @@
 <span class="go">Mode                LastWriteTime         Length Name</span>
 <span class="go">----                -------------         ------ ----</span>
 <span class="go">-a----       2020/11/11     13:17           3091 Vagrantfile</span>
+
+<span class="go">PS C:\Users\user01\vagrant_test&gt; cat Vagrantfile</span>
+<span class="go">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="go">  config.vm.box = &quot;generic/centos8&quot;</span>
+<span class="go">end</span>
 </code></pre></div>
 </td></tr></table>
 <p>以上でVMを作成する準備が出来ました。</p>
