@@ -42,9 +42,6 @@ the comments in the Vagrantfile as well as documentation on
 `vagrantup.com` for more information on using Vagrant.
 ```
 
-!!! Tip
-    [こちら](https://app.vagrantup.com/boxes/search?utf8=%E2%9C%93&sort=downloads&provider=&q=)から使用したいイメージを選ぶ事が出来ます。(詳細は後述)
-
 `Vagrantfile`が作成されたことを確認します。
 
 ```console
