@@ -20,6 +20,7 @@ nav:
     - VM作成: 'how_to_use/create.md'
     - OS一覧: 'how_to_use/box.md'
   - Vagrantfileの活用:
+    - Vagrantfileとは: 'vagrantfile/vagrantfile.md'
     - ネットワーク: 'vagrantfile/network.md'
     - ファイル共有: 'vagrantfile/sync.md'
     - プロビジョニング: 'vagrantfile/provision.md'
