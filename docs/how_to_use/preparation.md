@@ -32,7 +32,7 @@ PS C:\Users\user01\vagrant_test>
 以下ではCentOS8の`Vagrantfile`を作成しています。
 
 ```console
-PS C:\Users\user01\vagrant_test> vagrant init generic/centos8
+PS C:\Users\user01\vagrant_test> vagrant init generic/centos8 --minimal
 ==> vagrant: A new version of Vagrant is available: 2.2.13 (installed version: 2.2.10)!
 ==> vagrant: To upgrade visit: https://www.vagrantup.com/downloads.html
 
@@ -41,6 +41,12 @@ ready to `vagrant up` your first virtual environment! Please read
 the comments in the Vagrantfile as well as documentation on
 `vagrantup.com` for more information on using Vagrant.
 ```
+
+!!! Tip
+    上記のコマンドは`--minimal`をオプションを付けて実行しています。  
+    オプション無しで実行した場合は、コメントアウトで`Vagrantfile`の使い方が記載されたファイルが作成されます。
+    (行数が多いので割愛。)  
+    `Vagrantfile`の詳細は[Vagrantfileとは](../../vagrantfile/vagrantfile)を参してください。
 
 `Vagrantfile`が作成されたことを確認します。
 
@@ -54,6 +60,11 @@ PS C:\Users\user01\vagrant_test> ls
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
 -a----       2020/11/11     13:17           3091 Vagrantfile
+
+PS C:\Users\user01\vagrant_test> cat Vagrantfile
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/centos8"
+end
 ```
 
 以上でVMを作成する準備が出来ました。
