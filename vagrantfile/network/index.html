@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -323,10 +328,48 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ネットワーク
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       ネットワーク
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    プライベートネットワーク
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -367,15 +410,77 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    プライベートネットワーク
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>ネットワーク</h1>
-                
-                
+                <h1 id="_1">ネットワーク</h1>
+<p>Vagrantfile内で<code>vm.network</code>の記述を行う事により、VMのプライベートネットワークやポートフォワーディング等
+ネットワークに関する設定を行う事が出来ます。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.network &quot;&lt;ネットワーク識別子&gt;&quot;, ip: &quot;&lt;IPアドレス&gt;&quot;</span>
+<span class="err">end</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_2">プライベートネットワーク</h2>
+<p>Windows(Host OS)とVM(Guest OS)間の通信を行う事が出来ます。
+ネットワーク識別子に<code>private_network</code>を指定、ipにVMのIPアドレスを指定します。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+</div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.network &quot;private_network&quot;, ip: &quot;192.168.211.3&quot;</span>
+<span class="err">end</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.vagrantup.com/docs/networking/basic_usage">Basic Usage - Networking | Vagrant by HashiCorp</a></li>
+<li><a href="https://labs.septeni.co.jp/entry/20140707/1404670069">Vagrantのネットワーク周りのあれこれ - Septeni Engineer's Blog</a></li>
+</ul>
                 
               
               

@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -335,10 +340,102 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ファイル共有
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       ファイル共有
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    必須パラメータ
+  </a>
+  
+    <nav class="md-nav" aria-label="必須パラメータ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    第1パラメータ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    第2パラメータ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    オプションパラメータ
+  </a>
+  
+    <nav class="md-nav" aria-label="オプションパラメータ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#owner" class="md-nav__link">
+    owner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group" class="md-nav__link">
+    group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -367,15 +464,151 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    必須パラメータ
+  </a>
+  
+    <nav class="md-nav" aria-label="必須パラメータ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    第1パラメータ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    第2パラメータ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    オプションパラメータ
+  </a>
+  
+    <nav class="md-nav" aria-label="オプションパラメータ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#owner" class="md-nav__link">
+    owner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group" class="md-nav__link">
+    group
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>ファイル共有</h1>
-                
-                
+                <h1 id="_1">ファイル共有</h1>
+<p>Vagrantfile内で<code>vm.synced_folder</code>の記述を行う事により、<br />
+Windows(Host OS)とVM(Guest OS)間でファイル共有を行う事が出来ます。</p>
+<p>ファイル共有を行う事によりHost OS⇔VM間のファイル転送が不要となります。</p>
+<p>ファイル共有を行うには各種パラメータを設定する必要があり、<br />
+<strong>Host OSのディレクトリパス</strong>および<strong>VMのディレクトリパス</strong>の指定は必須、その他はオプションとなっています。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.synced_folder &quot;&lt;Host OSディレクトリパス&gt;&quot;, &quot;&lt;VMディレクトリパス&gt;&quot;, owner: &quot;&lt;ディレクトリ所有者&gt;&quot;, group: &quot;&lt;ディレクトリグループ&gt;&quot;, type: &quot;&lt;同期フォルダタイプ&gt;&quot;</span>
+<span class="err">end</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="_2">必須パラメータ</h2>
+<h3 id="1">第1パラメータ</h3>
+<p>Host OSのディレクトリパスを指定します。<br />
+絶対パス、相対パスどちらも指定可能です。
+"."と記述した場合Vagrantfileがある場所を示します。</p>
+<h3 id="2">第2パラメータ</h3>
+<p>VMSのディレクトリパスを指定します。<br />
+第1パラメータと違い、絶対パスを記述する必要があります。</p>
+<h2 id="_3">オプションパラメータ</h2>
+<h3 id="owner">owner</h3>
+<p>同期ディレクトリに設定される所有者を指定します。<br />
+指定しない場合vagrantが設定されます。</p>
+<h3 id="group">group</h3>
+<p>同期ディレクトリに設定されるグループを指定します。<br />
+指定しない場合vagrantが設定されます。</p>
+<h3 id="type">type</h3>
+<p>同期ディレクトリに設定されるファイルタイプを指定します。<br />
+ファイルタイプは<strong>virtualbox</strong>, <strong>nfs</strong>, <strong>rsync</strong>, <strong>smb</strong>が存在し、指定しない場合virtualboxが設定されます。
+特別な理由が無い限りvirtualboxを指定することを推奨します。</p>
+<hr />
+<p>以下の例ではHost OSのVagrantfileのディレクトリとVMの/vagrantディレクトリを同期します。
+また、所有者およびグループをvagrantに設定しています。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+</div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.synced_folder &quot;.&quot;, &quot;/vagrant&quot;, owner: &quot;vagrant&quot;, group: &quot;vagrant&quot;, type: &quot;virtualbox&quot;</span>
+<span class="err">end</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="reference">Reference</h2>
+<p>設定できるオプションは他にも存在しますが、詳細は以下の公式サイトをご覧ください。</p>
+<p><a href="https://www.vagrantup.com/docs/synced-folders/basic_usage">Basic Usage - Synced Folders | Vagrant by HashiCorp</a></p>
                 
               
               

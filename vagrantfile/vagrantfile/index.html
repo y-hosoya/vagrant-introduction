@@ -465,7 +465,11 @@ Ruby言語の規約に従えば自由な記述が出来ますが、Ruby知識が
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
-<p>この2行目にBoxの指定するコーディングがされていることが分かります。</p>
+<p>この2行目にBoxの指定するコーディングがされていることが分かります。  </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>vm.box</code>はVM作成する上で必須のパラメータになります。</p>
+</div>
 <p>実際、上記の3行のみでVMを作成することが出来ますが、MemoryやDiskSizeなどはデフォルトの値となります。<br />
 これを指定するために、次章より<code>Vagrantfile</code>の詳細を見ていきます。</p>
 <p>また指定した値は、VM起動後も変更することが可能です。</p>
