@@ -1,6 +1,6 @@
 # ファイル共有
 
-Vagrantfile内で`vm.synced_folder`の記述を行う事により、  
+Vagrantfileに`vm.synced_folder`の記述を行う事により、  
 Windows(Host OS)とVM(Guest OS)間でファイル共有を行う事が出来ます。
 
 ファイル共有を行う事によりHost OS⇔VM間のファイル転送が不要となります。
@@ -19,12 +19,11 @@ end
 ### 第1パラメータ
 
 Host OSのディレクトリパスを指定します。  
-絶対パス、相対パスどちらも指定可能です。
-"."と記述した場合Vagrantfileがある場所を示します。
+絶対パス・相対パスどちらも指定可能で、`"."`と記述した場合Vagrantfileがある場所を示します。
 
 ### 第2パラメータ
 
-VMSのディレクトリパスを指定します。  
+VMのディレクトリパスを指定します。  
 第1パラメータと違い、絶対パスを記述する必要があります。
 
 ## オプションパラメータ
@@ -42,12 +41,12 @@ VMSのディレクトリパスを指定します。
 ### type
 
 同期ディレクトリに設定されるファイルタイプを指定します。  
-ファイルタイプは**virtualbox**, **nfs**, **rsync**, **smb**が存在し、指定しない場合virtualboxが設定されます。
+ファイルタイプは**virtualbox**, **nfs**, **rsync**, **smb**が存在し、指定しない場合virtualboxが設定されます。  
 特別な理由が無い限りvirtualboxを指定することを推奨します。
 
 ---
 
-以下の例ではHost OSのVagrantfileのディレクトリとVMの/vagrantディレクトリを同期します。
+以下の例ではHost OSのVagrantfileのディレクトリとVMの/vagrantディレクトリを同期します。  
 また、所有者およびグループをvagrantに設定しています。
 
 !!!example
