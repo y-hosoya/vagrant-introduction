@@ -49,7 +49,7 @@ VMのディレクトリパスを指定します。
 以下の例ではHost OSのVagrantfileのディレクトリとVMの/vagrantディレクトリを同期します。  
 また、所有者およびグループをvagrantに設定しています。
 
-!!!example
+!!!Example
 
 ```Vagrantfile
 Vagrant.configure("2") do |config|

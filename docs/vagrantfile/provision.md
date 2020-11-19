@@ -27,7 +27,7 @@ end
 アップロード先であるVMのパスを指定します。  
 相対パスを記述することは出来ず、絶対パスを記述する必要があります。
 
-!!!example
+!!!Example
 
 ```Vagrantfile
 Vagrant.configure("2") do |config|
@@ -80,7 +80,7 @@ end
 VM上の`/home/vagrant/.gitconfig`を`/root/.gitconfig`へコピーします。  
 **privileged**: trueを指定することにより特権ユーザで実行されるため$HOMEには`/root`という値が格納されます。
 
-!!!example
+!!!Example
 
 ```Vagrantfile
 Vagrant.configure("2") do |config|
@@ -95,7 +95,7 @@ Host OSのVagrantfileが配置されているディレクトリに存在する`s
 Host OS上もしくはVM上でAnsibleを実行することが出来ます。  
 本項ではVM上でAnsibleを実行する手順を紹介します。
 
-!!!example
+!!!Example
 
 ```Vagrantfile
 Vagrant.configure("2") do |config|
@@ -131,7 +131,7 @@ ansible-playbookの-l(--limit)オプションと同義です。
 
 ansible-playbookを実行する際、追加の引数を設定したい場合利用します。
 
-!!!example
+!!!Example
 
 ```Vagrantfile
 Vagrant.configure("2") do |config|

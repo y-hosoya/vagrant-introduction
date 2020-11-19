@@ -19,7 +19,7 @@ end
 ### ip
 VMのIPアドレスを指定します。
 
-!!!example
+!!!Example
 
 ```Vagrantfile
 Vagrant.configure("2") do |config|
@@ -46,7 +46,7 @@ end
 ### ip
 VMのIPアドレスを指定します。
 
-!!!example
+!!!Example
 
 ```Vagrantfile
 Vagrant.configure("2") do |config|
@@ -79,7 +79,7 @@ VM上のポート番号を指定します。
 
 Host OSから接続する際のポート番号を指定します。
 
-!!!example
+!!!Example
 
 ```Vagrantfile
 Vagrant.configure("2") do |config|
