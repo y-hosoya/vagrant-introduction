@@ -24,6 +24,7 @@ nav:
     - ネットワーク: 'vagrantfile/network.md'
     - ファイル共有: 'vagrantfile/sync.md'
     - プロビジョニング: 'vagrantfile/provision.md'
+    - まとめ: 'vagrantfile/summary.md'
 
 site_name: 'Vagrant Introduction'
 
