@@ -70,7 +70,7 @@ privileged
 特権ユーザとして実行が必要な場合、trueを指定します。
 オプション項目であるため、指定しない場合でもシェルは実行されます。
 
-!!!Exmaple
+!!!Example
 
 ```Vagrantfile
 Vagrant.configure("2") do |config|

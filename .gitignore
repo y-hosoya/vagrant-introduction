@@ -1,3 +1,4 @@
+.vagrant/
 site/
 .DS_Store
 .venv/
