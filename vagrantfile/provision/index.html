@@ -387,7 +387,7 @@
         
           <li class="md-nav__item">
   <a href="#file" class="md-nav__link">
-    "file"
+    file
   </a>
   
 </li>
@@ -421,7 +421,7 @@
         
           <li class="md-nav__item">
   <a href="#shell" class="md-nav__link">
-    "shell"
+    shell
   </a>
   
 </li>
@@ -429,6 +429,20 @@
           <li class="md-nav__item">
   <a href="#inline" class="md-nav__link">
     inline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privileged" class="md-nav__link">
+    privileged
   </a>
   
 </li>
@@ -448,7 +462,7 @@
         
           <li class="md-nav__item">
   <a href="#ansible_local" class="md-nav__link">
-    "ansible_local"
+    ansible_local
   </a>
   
 </li>
@@ -550,7 +564,7 @@
         
           <li class="md-nav__item">
   <a href="#file" class="md-nav__link">
-    "file"
+    file
   </a>
   
 </li>
@@ -584,7 +598,7 @@
         
           <li class="md-nav__item">
   <a href="#shell" class="md-nav__link">
-    "shell"
+    shell
   </a>
   
 </li>
@@ -592,6 +606,20 @@
           <li class="md-nav__item">
   <a href="#inline" class="md-nav__link">
     inline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privileged" class="md-nav__link">
+    privileged
   </a>
   
 </li>
@@ -611,7 +639,7 @@
         
           <li class="md-nav__item">
   <a href="#ansible_local" class="md-nav__link">
-    "ansible_local"
+    ansible_local
   </a>
   
 </li>
@@ -670,10 +698,9 @@
                 
                 
                 <h1 id="_1">プロビジョニング</h1>
-<p>Vagrantfile内で<code>vm.provision</code>の記述を行う事により、Windows(Host OS)からVM(Guest OS)へファイル/ディレクトリのアップロード、
-またVM(Guest OS)にログインすることなくシェルやAnsible等を実行することが出来ます。</p>
+<p>Vagrantfileに<code>vm.provision</code>の記述を行う事により、Windows(Host OS)からVM(Guest OS)へファイル/ディレクトリのアップロード、またVM(Guest OS)にログインすることなくシェルやAnsible等を実行することが出来ます。</p>
 <h2 id="_2">ファイル/ディレクトリアップロード</h2>
-<p>パラメータに"file"を指定し、source, destinationにパスを指定することにより、
+<p>パラメータに<code>file</code>を指定し、<code>source</code>, <code>destination</code>にパスを指定することにより、<br />
 Host OSからVMへファイル/ディレクトリのアップロードを行う事が出来ます。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -682,11 +709,11 @@ Host OSからVMへファイル/ディレクトリのアップロードを行う�
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="file">"file"</h3>
+<h3 id="file">file</h3>
 <p>ファイルもしくはディレクトリのアップロードを行う事を明示する値です。</p>
 <h3 id="source">source</h3>
 <p>アップロード元であるHost OSのパスを指定します。<br />
-絶対パス、相対パスどちらも指定可能で、相対パスの起点はVagrantfileがある場所です。</p>
+絶対パス・相対パスどちらも指定可能で、相対パスの起点はVagrantfileがある場所です。</p>
 <h3 id="destination">destination</h3>
 <p>アップロード先であるVMのパスを指定します。<br />
 相対パスを記述することは出来ず、絶対パスを記述する必要があります。</p>
@@ -700,13 +727,12 @@ Host OSからVMへファイル/ディレクトリのアップロードを行う�
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
-<p>Host OSのホームディレクトリ配下にある<code>.gitconfig</code>ファイルを
-VMの/home/vagrantディレクトリ配下へ<code>.gitconfig</code>というファイル名でコピーします。
-Vgrantの実行はvagrantユーザで行われるため、$HOMEには<code>/home/vagrant</code>という値が格納されます。</p>
+<p>Host OSのホームディレクトリ配下にある<code>.gitconfig</code>ファイルをVMの/home/vagrantディレクトリ配下へ<code>.gitconfig</code>というファイル名でコピーします。<br />
+Vagrantの実行はvagrantユーザで行われるため、$HOMEには<code>/home/vagrant</code>という値が格納されます。</p>
 <h2 id="_3">シェル</h2>
-<p>パラメータに"shell"を指定及び、inlineもしくはpathを指定することによりVM内でシェルが実行されます。
-inline内に実行したいコマンドを記述することによりVM内でコマンドが実行されます。
-また、inlineではなくpathを記述することにより<code>script.sh</code>のようなシェルスクリプトを実行することも可能です。
+<p>パラメータに<code>shell</code>を指定及び、<code>inline</code>もしくは<code>path</code>を指定することによりVM内でシェルが実行されます。<br />
+<code>inline</code>内に実行したいコマンドを記述することによりVM内でコマンドが実行されます。<br />
+また、<code>inline</code>ではなく<code>path</code>を記述することにより<code>script.sh</code>のようなシェルスクリプトを実行することも可能です。 <br />
 当機能を利用することによりパッケージのインストール等を自動的に行う事が出来ます。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -717,17 +743,17 @@ inline内に実行したいコマンドを記述することによりVM内でコ
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="shell">"shell"</h3>
+<h3 id="shell">shell</h3>
 <p>シェルの実行を行う事を明示する値です。</p>
 <h3 id="inline">inline</h3>
-<p>Vagrantfileに直接実行するコマンドを記述する場合に利用します。
-実行したいコマンドをダブルクオーテーションで囲むことによりVM内でコマンドが実行されます。
-path
-script.shのような外部スクリプトを実行する際に利用します。
-VMではなくHost OS上のパスを指定する必要があることに注意してください。
-絶対パス、相対パスどちらも指定可能で、相対パスの起点はVagrantfileがある場所です。
-privileged
-特権ユーザとして実行が必要な場合、trueを指定します。
+<p>Vagrantfileに直接実行するコマンドを記述する場合に利用します。<br />
+実行したいコマンドをダブルクオーテーションで囲むことによりVM内でコマンドが実行されます。  </p>
+<h3 id="path">path</h3>
+<p>script.shのような外部スクリプトを実行する際に利用します。<br />
+VMではなくHost OS上のパスを指定する必要があることに注意してください。<br />
+絶対パス・相対パスどちらも指定可能で、相対パスの起点はVagrantfileがある場所です。  </p>
+<h3 id="privileged">privileged</h3>
+<p>特権ユーザとして実行が必要な場合、trueを指定します。<br />
 オプション項目であるため、指定しない場合でもシェルは実行されます。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -741,8 +767,8 @@ privileged
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
-<p>VM上の/home/vagrant/.gitconfigを/root/.gitconfigへコピーします。
-<strong>privileged</strong>: trueを指定することにより特権ユーザで実行されるため$HOMEには/rootという値が格納されます。</p>
+<p>VM上の<code>/home/vagrant/.gitconfig</code>を<code>/root/.gitconfig</code>へコピーします。<br />
+<strong>privileged</strong>: trueを指定することにより特権ユーザで実行されるため$HOMEには<code>/root</code>という値が格納されます。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 </div>
@@ -755,7 +781,7 @@ privileged
 </td></tr></table>
 <p>Host OSのVagrantfileが配置されているディレクトリに存在する<code>script.sh</code>をVM上で実行します。</p>
 <h2 id="ansible">Ansible</h2>
-<p>Host OS上もしくはVM上でAnsibleを実行することが出来ます。
+<p>Host OS上もしくはVM上でAnsibleを実行することが出来ます。<br />
 本項ではVM上でAnsibleを実行する手順を紹介します。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -777,16 +803,16 @@ privileged
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="ansible_local">"ansible_local"</h3>
-<p>VM上でAnsibleを実行することを明示する値です。
-なおHost OS上でAnsibleを実行する際は"ansible"を指定します。</p>
+<h3 id="ansible_local">ansible_local</h3>
+<p>VM上でAnsibleを実行することを明示する値です。<br />
+なおHost OS上でAnsibleを実行する際はansibleを指定します。</p>
 <h3 id="ansibleplaybook">ansible.playbook</h3>
 <p>プレイブックであるymlファイルを指定します。</p>
 <h3 id="ansibleinventory_path">ansible.inventory_path</h3>
-<p>インベントリファイルを指定します。
+<p>インベントリファイルを指定します。<br />
 ansible-playbookの-i(--inventory)オプションと同義です。</p>
 <h3 id="ansiblelimit">ansible.limit</h3>
-<p>Ansibleを実行するホストを制限する場合に利用します。
+<p>Ansibleを実行するホストを制限する場合に利用します。<br />
 ansible-playbookの-l(--limit)オプションと同義です。</p>
 <h3 id="ansibleraw_arguments">ansible.raw_arguments</h3>
 <p>ansible-playbookを実行する際、追加の引数を設定したい場合利用します。</p>
@@ -810,12 +836,12 @@ ansible-playbookの-l(--limit)オプションと同義です。</p>
 <span class="n">end</span>
 </code></pre></div>
 </td></tr></table>
-<p>プレイブックにsite.ymlを指定、インベントリに<code>inventory.ini</code>を指定、<br />
+<p>プレイブックに<code>site.yml</code>を指定、インベントリに<code>inventory.ini</code>を指定、<br />
 実行対象はすべてのホスト、ansible-playbookに<code>-e @vars.yml</code>のオプションを追加してAnsibleを実行します。<br />
 VM上で以下を実行する事と同義です。</p>
 <p><code>ansible-playbook -i inventory.ini site.yml -l all -e @vars.yml</code></p>
 <h2 id="reference">Reference</h2>
-<p>プロビジョニングで利用できる機能は他にも存在します。
+<p>プロビジョニングで利用できる機能は他にも存在します。<br />
 詳細は以下の公式サイトをご覧ください。</p>
 <p><a href="https://www.vagrantup.com/docs/provisioning/basic_usage">Basic Usage - Provisioning | Vagrant by HashiCorp</a></p>
                 

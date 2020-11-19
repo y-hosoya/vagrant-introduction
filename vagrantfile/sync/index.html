@@ -574,7 +574,7 @@
                 
                 
                 <h1 id="_1">ファイル共有</h1>
-<p>Vagrantfile内で<code>vm.synced_folder</code>の記述を行う事により、<br />
+<p>Vagrantfileに<code>vm.synced_folder</code>の記述を行う事により、<br />
 Windows(Host OS)とVM(Guest OS)間でファイル共有を行う事が出来ます。</p>
 <p>ファイル共有を行う事によりHost OS⇔VM間のファイル転送が不要となります。</p>
 <p>ファイル共有を行うには各種パラメータを設定する必要があり、<br />
@@ -589,10 +589,9 @@ Windows(Host OS)とVM(Guest OS)間でファイル共有を行う事が出来ま�
 <h2 id="_2">必須パラメータ</h2>
 <h3 id="1">第1パラメータ</h3>
 <p>Host OSのディレクトリパスを指定します。<br />
-絶対パス、相対パスどちらも指定可能です。
-"."と記述した場合Vagrantfileがある場所を示します。</p>
+絶対パス・相対パスどちらも指定可能で、<code>"."</code>と記述した場合Vagrantfileがある場所を示します。</p>
 <h3 id="2">第2パラメータ</h3>
-<p>VMSのディレクトリパスを指定します。<br />
+<p>VMのディレクトリパスを指定します。<br />
 第1パラメータと違い、絶対パスを記述する必要があります。</p>
 <h2 id="_3">オプションパラメータ</h2>
 <h3 id="owner">owner</h3>
@@ -603,10 +602,10 @@ Windows(Host OS)とVM(Guest OS)間でファイル共有を行う事が出来ま�
 指定しない場合vagrantが設定されます。</p>
 <h3 id="type">type</h3>
 <p>同期ディレクトリに設定されるファイルタイプを指定します。<br />
-ファイルタイプは<strong>virtualbox</strong>, <strong>nfs</strong>, <strong>rsync</strong>, <strong>smb</strong>が存在し、指定しない場合virtualboxが設定されます。
+ファイルタイプは<strong>virtualbox</strong>, <strong>nfs</strong>, <strong>rsync</strong>, <strong>smb</strong>が存在し、指定しない場合virtualboxが設定されます。<br />
 特別な理由が無い限りvirtualboxを指定することを推奨します。</p>
 <hr />
-<p>以下の例ではHost OSのVagrantfileのディレクトリとVMの/vagrantディレクトリを同期します。
+<p>以下の例ではHost OSのVagrantfileのディレクトリとVMの/vagrantディレクトリを同期します。<br />
 また、所有者およびグループをvagrantに設定しています。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>

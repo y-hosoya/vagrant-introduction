@@ -358,6 +358,87 @@
     プライベートネットワーク
   </a>
   
+    <nav class="md-nav" aria-label="プライベートネットワーク">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#private_network" class="md-nav__link">
+    private_network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    ip
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    パブリックネットワーク
+  </a>
+  
+    <nav class="md-nav" aria-label="パブリックネットワーク">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public_network" class="md-nav__link">
+    public_network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip_1" class="md-nav__link">
+    ip
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ポートフォワーディング
+  </a>
+  
+    <nav class="md-nav" aria-label="ポートフォワーディング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forwarded_port" class="md-nav__link">
+    forwarded_port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest" class="md-nav__link">
+    guest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host" class="md-nav__link">
+    host
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -443,6 +524,87 @@
     プライベートネットワーク
   </a>
   
+    <nav class="md-nav" aria-label="プライベートネットワーク">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#private_network" class="md-nav__link">
+    private_network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    ip
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    パブリックネットワーク
+  </a>
+  
+    <nav class="md-nav" aria-label="パブリックネットワーク">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public_network" class="md-nav__link">
+    public_network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip_1" class="md-nav__link">
+    ip
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ポートフォワーディング
+  </a>
+  
+    <nav class="md-nav" aria-label="ポートフォワーディング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forwarded_port" class="md-nav__link">
+    forwarded_port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guest" class="md-nav__link">
+    guest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host" class="md-nav__link">
+    host
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -466,18 +628,21 @@
                 
                 
                 <h1 id="_1">ネットワーク</h1>
-<p>Vagrantfile内で<code>vm.network</code>の記述を行う事により、VMのプライベートネットワークやポートフォワーディング等
-ネットワークに関する設定を行う事が出来ます。</p>
+<p>Vagrantfileに<code>vm.network</code>の記述を行う事によりWindows(Host OS)とVM(Guest OS)間での<br />
+プライベートネットワークやポートフォワーディング等ネットワークに関する設定を行う事が出来ます。</p>
+<h2 id="_2">プライベートネットワーク</h2>
+<p>パラメータに<code>private_network</code>を指定する事により、Host OSとVM間で通信を行う事が出来ます。  </p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
-<span class="err">  config.vm.network &quot;&lt;ネットワーク識別子&gt;&quot;, ip: &quot;&lt;IPアドレス&gt;&quot;</span>
+<span class="err">  config.vm.network &quot;private_network&quot;, ip: &quot;&lt;IPアドレス&gt;&quot;</span>
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
-<h2 id="_2">プライベートネットワーク</h2>
-<p>Windows(Host OS)とVM(Guest OS)間の通信を行う事が出来ます。
-ネットワーク識別子に<code>private_network</code>を指定、ipにVMのIPアドレスを指定します。</p>
+<h3 id="private_network">private_network</h3>
+<p>プライベートネットワークを設定する事を明示する値です。</p>
+<h3 id="ip">ip</h3>
+<p>VMのIPアドレスを指定します。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 </div>
@@ -488,6 +653,58 @@
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
+<p><code>192.168.211.3</code>というプライベートIPアドレスをVMに設定します。</p>
+<h2 id="_3">パブリックネットワーク</h2>
+<p>パラメータに<code>public_network</code>を指定する事により、外部ネットワークとVM間で通信を行う事が出来ます。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.network &quot;public_network&quot;, ip: &quot;192.168.0.17&quot;</span>
+<span class="err">end</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="public_network">public_network</h3>
+<p>パブリックネットワークを設定する事を明示する値です。</p>
+<h3 id="ip_1">ip</h3>
+<p>VMのIPアドレスを指定します。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+</div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.network &quot;public_network&quot;, ip: &quot;192.168.0.17&quot;</span>
+<span class="err">end</span>
+</code></pre></div>
+</td></tr></table>
+<p><code>192.168.0.17</code>というIPアドレスをVMに設定し、外部ネットワークからのアクセスを可能にします。</p>
+<h2 id="_4">ポートフォワーディング</h2>
+<p>パラメータに<code>forwarded_port</code>を指定及び、Host OS, VMのポート番号を指定する事により、<br />
+Host OSからVMに対するポートフォワーディングを行う事が出来ます。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.network &quot;forwarded_port&quot;, guest: &lt;VMポート番号&gt;, host: &lt;Host OSポート番号&gt;</span>
+<span class="err">end</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="forwarded_port">forwarded_port</h3>
+<p>ポートフォワーディングを設定する事を明示する値です。</p>
+<h3 id="guest">guest</h3>
+<p>VM上のポート番号を指定します。</p>
+<h3 id="host">host</h3>
+<p>Host OSから接続する際のポート番号を指定します。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+</div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</span>
+<span class="err">end</span>
+</code></pre></div>
+</td></tr></table>
+<p>Host OSの<code>8080</code>ポートにアクセスがあった際、VMの<code>80</code>ポートに通信を転送します。</p>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://www.vagrantup.com/docs/networking/basic_usage">Basic Usage - Networking | Vagrant by HashiCorp</a></li>
