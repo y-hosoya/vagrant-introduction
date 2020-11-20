@@ -293,6 +293,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#optional" class="md-nav__link">
+    プラグインのインストール(Optional)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -452,6 +466,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#optional" class="md-nav__link">
+    プラグインのインストール(Optional)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -552,6 +580,38 @@
 <span class="go">end</span>
 </code></pre></div>
 </td></tr></table>
+<h2 id="optional">プラグインのインストール(Optional)</h2>
+<p>Vagrantには多くのプラグインが用意されており、便利機能を追加することができます。<br />
+<a href="https://github.com/hashicorp/vagrant/wiki/Available-Vagrant-Plugins">Available Vagrant Plugins · hashicorp/vagrant Wiki</a>で使用できるプラグイン一覧が確認できます。</p>
+<p>プラグインをインストールするには<code>vagrant plugin install &lt;プラグイン名&gt;</code>を実行します。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01\vagrant_test&gt; vagrant plugin install vagrant-vbguest</span>
+<span class="go">Installing the &#39;vagrant-vbguest&#39; plugin. This can take a few minutes...</span>
+<span class="go">Fetching micromachine-3.0.0.gem</span>
+<span class="go">Fetching vagrant-vbguest-0.27.0.gem</span>
+<span class="go">Installed the plugin &#39;vagrant-vbguest (0.27.0)&#39;!</span>
+</code></pre></div>
+</td></tr></table>
+<p>ここでは<code>vagrant-vbguest</code>をインストールしています。<br />
+ゲストOS側とホストOS側のGuestAdditionを揃えてくれるプラグインです。<br />
+<a href="https://github.com/dotless-de/vagrant-vbguest">dotless-de/vagrant-vbguest: A Vagrant plugin to keep your VirtualBox Guest Additions up to date</a></p>
+<p><code>vagrant plugin list</code>コマンドでインストールされているプラグインの一覧が確認できます。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01\vagrant_test&gt; vagrant plugin list</span>
+<span class="go">vagrant-rdp (0.6.0, global)</span>
+<span class="go">  - Version Constraint: &gt; 0</span>
+<span class="go">vagrant-vbguest (0.24.0, global)</span>
+<span class="go">vagrant-winnfsd (1.4.0, global)</span>
+<span class="go">  - Version Constraint: &gt; 0</span>
+</code></pre></div>
+</td></tr></table>
 <p>以上でVMを作成する準備が出来ました。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -564,6 +624,10 @@
 </li>
 </ul>
 </div>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.vagrantup.com/docs/plugins/usage">Plugin Usage - Plugins | Vagrant by HashiCorp</a></li>
+</ul>
                 
               
               
