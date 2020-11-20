@@ -67,6 +67,36 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+## プラグインのインストール(Optional)
+
+Vagrantには多くのプラグインが用意されており、便利機能を追加することができます。  
+[Available Vagrant Plugins · hashicorp/vagrant Wiki](https://github.com/hashicorp/vagrant/wiki/Available-Vagrant-Plugins)で使用できるプラグイン一覧が確認できます。
+
+プラグインをインストールするには`vagrant plugin install <プラグイン名>`を実行します。
+
+```console
+PS C:\Users\user01\vagrant_test> vagrant plugin install vagrant-vbguest
+Installing the 'vagrant-vbguest' plugin. This can take a few minutes...
+Fetching micromachine-3.0.0.gem
+Fetching vagrant-vbguest-0.27.0.gem
+Installed the plugin 'vagrant-vbguest (0.27.0)'!
+```
+
+ここでは`vagrant-vbguest`をインストールしています。  
+ゲストOS側とホストOS側のGuestAdditionを揃えてくれるプラグインです。  
+[dotless-de/vagrant-vbguest: A Vagrant plugin to keep your VirtualBox Guest Additions up to date](https://github.com/dotless-de/vagrant-vbguest)
+
+`vagrant plugin list`コマンドでインストールされているプラグインの一覧が確認できます。
+
+```console
+PS C:\Users\user01\vagrant_test> vagrant plugin list
+vagrant-rdp (0.6.0, global)
+  - Version Constraint: > 0
+vagrant-vbguest (0.24.0, global)
+vagrant-winnfsd (1.4.0, global)
+  - Version Constraint: > 0
+```
+
 以上でVMを作成する準備が出来ました。
 
 !!! Tip
@@ -74,3 +104,7 @@ end
     - `vagrant init`コマンドは、`Vagrantfile`のみを作成するものです。
         - Memory,IPアドレス,ホスト名などを指定する場合は、`Vagranfile`を編集することで指定のVM作成が可能です(詳細はvagrantfileページ参照)
         - GitHubなどで既に`Vagrantfile`が用意されている場合は実施する必要はありません(詳細はvagrantfileページ参照)
+
+## Reference
+
+- [Plugin Usage - Plugins | Vagrant by HashiCorp](https://www.vagrantup.com/docs/plugins/usage)
