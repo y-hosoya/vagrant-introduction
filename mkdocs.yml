@@ -21,6 +21,7 @@ nav:
     - OS一覧: 'how_to_use/box.md'
   - Vagrantfileの活用:
     - Vagrantfileとは: 'vagrantfile/vagrantfile.md'
+    - VMスペック: 'vagrantfile/spec.md'
     - ネットワーク: 'vagrantfile/network.md'
     - ファイル共有: 'vagrantfile/sync.md'
     - プロビジョニング: 'vagrantfile/provision.md'
