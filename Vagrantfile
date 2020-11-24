@@ -5,6 +5,10 @@ Vagrant.configure("2") do |config|
   config.vm.box = "generic/centos8"
   config.vm.box_version = "3.1.4"
   config.vm.hostname = "centos"
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 512
+    v.cpus = 2
+  end
   config.vm.network "private_network", ip: "192.168.211.5"
   config.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", type: "virtualbox"
   config.vm.provision "shell",
