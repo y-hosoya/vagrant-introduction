@@ -13,7 +13,7 @@
     
     
       
-        <title>ネットワーク - Vagrant Introduction</title>
+        <title>VMスペック - Vagrant Introduction</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#vm" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              ネットワーク
+              VMスペック
             
           </span>
         </div>
@@ -321,18 +321,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../spec/" class="md-nav__link">
-      VMスペック
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -344,12 +332,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        ネットワーク
+        VMスペック
         <span class="md-nav__icon md-icon"></span>
       </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      ネットワーク
+      VMスペック
     </a>
     
       
@@ -366,90 +354,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    プライベートネットワーク
+  <a href="#hostname" class="md-nav__link">
+    hostname
   </a>
-  
-    <nav class="md-nav" aria-label="プライベートネットワーク">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#private_network" class="md-nav__link">
-    private_network
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ip" class="md-nav__link">
-    ip
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    パブリックネットワーク
+  <a href="#disksize" class="md-nav__link">
+    DiskSize
   </a>
-  
-    <nav class="md-nav" aria-label="パブリックネットワーク">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#public_network" class="md-nav__link">
-    public_network
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ip_1" class="md-nav__link">
-    ip
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ポートフォワーディング
-  </a>
-  
-    <nav class="md-nav" aria-label="ポートフォワーディング">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#forwarded_port" class="md-nav__link">
-    forwarded_port
+  <a href="#memorysize" class="md-nav__link">
+    MemorySize
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#guest" class="md-nav__link">
-    guest
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    CPUコア数
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#host" class="md-nav__link">
-    host
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -464,6 +392,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/" class="md-nav__link">
+      ネットワーク
+    </a>
   </li>
 
         
@@ -532,90 +472,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    プライベートネットワーク
+  <a href="#hostname" class="md-nav__link">
+    hostname
   </a>
-  
-    <nav class="md-nav" aria-label="プライベートネットワーク">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#private_network" class="md-nav__link">
-    private_network
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ip" class="md-nav__link">
-    ip
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    パブリックネットワーク
+  <a href="#disksize" class="md-nav__link">
+    DiskSize
   </a>
-  
-    <nav class="md-nav" aria-label="パブリックネットワーク">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#public_network" class="md-nav__link">
-    public_network
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ip_1" class="md-nav__link">
-    ip
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ポートフォワーディング
-  </a>
-  
-    <nav class="md-nav" aria-label="ポートフォワーディング">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#forwarded_port" class="md-nav__link">
-    forwarded_port
+  <a href="#memorysize" class="md-nav__link">
+    MemorySize
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#guest" class="md-nav__link">
-    guest
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    CPUコア数
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#host" class="md-nav__link">
-    host
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -639,88 +519,112 @@
               
                 
                 
-                <h1 id="_1">ネットワーク</h1>
-<p>Vagrantfileに<code>vm.network</code>の記述を行う事によりWindows(Host OS)とVM(Guest OS)間での<br />
-プライベートネットワークやポートフォワーディング等ネットワークに関する設定を行う事が出来ます。</p>
-<h2 id="_2">プライベートネットワーク</h2>
-<p>パラメータに<code>private_network</code>を指定する事により、Host OSとVM間で通信を行う事が出来ます。  </p>
+                <h1 id="vm">VMスペック</h1>
+<p>Vagrantfileに記述を行う事により、VM(Guest OS)のhostnameを設定、DiskSizeの変更、MemorySizeの変更、CPUコア数等を変更する事が出来ます。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
-<span class="err">  config.vm.network &quot;private_network&quot;, ip: &quot;&lt;IPアドレス&gt;&quot;</span>
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.hostname = &quot;&lt;hostname&gt;&quot; # hostname指定</span>
+<span class="err">  config.disksize.size = &quot;&lt;DiskSize&gt;&quot; # DiskSize指定</span>
+<span class="err">  config.vm.provider &quot;virtualbox&quot; do |v|</span>
+<span class="err">    v.memory = &lt;MemorySize&gt; # MemorySize指定</span>
+<span class="err">    v.cpus = &lt;CPU数&gt; # CPU数指定</span>
+<span class="err">  end</span>
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="private_network">private_network</h3>
-<p>プライベートネットワークを設定する事を明示する値です。</p>
-<h3 id="ip">ip</h3>
-<p>VMのIPアドレスを指定します。</p>
+<h2 id="hostname">hostname</h2>
+<p><code>vm.hostname</code>を指定する事により、VMのhostnameを設定する事が出来ます。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 </div>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
-<span class="err">  config.vm.network &quot;private_network&quot;, ip: &quot;192.168.211.3&quot;</span>
+<span class="err">  config.vm.hostname = &quot;centos&quot;</span>
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
-<p><code>192.168.211.3</code>というプライベートIPアドレスをVMに設定します。</p>
-<h2 id="_3">パブリックネットワーク</h2>
-<p>パラメータに<code>public_network</code>を指定する事により、外部ネットワークとVM間で通信を行う事が出来ます。</p>
+<p>hostnameにcentosを設定します。</p>
+<h2 id="disksize">DiskSize</h2>
+<p><code>disksize.size</code>を指定する事により、VMのDiskSizeを設定する事が出来ます。<br />
+なお、disksize.sizeは<code>vagrant-disksize</code>というプラグインで管理されているため、<br />
+<strong>PowerShell</strong>で事前にプラグインをインストールする必要があります。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
-<span class="err">  config.vm.network &quot;public_network&quot;, ip: &quot;192.168.0.17&quot;</span>
-<span class="err">end</span>
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="go">PS C:\Users\user01\vagrant_test&gt; vagrant plugin install vagrant-disksize</span>
+<span class="go">Installing the &#39;vagrant-disksize&#39; plugin. This can take a few minutes...</span>
+<span class="go">Fetching vagrant-vbguest-0.27.0.gem</span>
+<span class="go">Fetching vagrant-disksize-0.1.3.gem</span>
+<span class="go">Successfully uninstalled vagrant-vbguest-0.27.0</span>
+<span class="go">Installed the plugin &#39;vagrant-disksize (0.1.3)&#39;!</span>
 </code></pre></div>
 </td></tr></table>
-<h3 id="public_network">public_network</h3>
-<p>パブリックネットワークを設定する事を明示する値です。</p>
-<h3 id="ip_1">ip</h3>
-<p>VMのIPアドレスを指定します。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 </div>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
-<span class="err">  config.vm.network &quot;public_network&quot;, ip: &quot;192.168.0.17&quot;</span>
+<span class="err">  config.disksize.size = &quot;55GB&quot;</span>
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
-<p><code>192.168.0.17</code>というIPアドレスをVMに設定し、外部ネットワークからのアクセスを可能にします。</p>
-<h2 id="_4">ポートフォワーディング</h2>
-<p>パラメータに<code>forwarded_port</code>を指定及び、Host OS, VMのポート番号を指定する事により、<br />
-Host OSからVMに対するポートフォワーディングを行う事が出来ます。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
-<span class="err">  config.vm.network &quot;forwarded_port&quot;, guest: &lt;VMポート番号&gt;, host: &lt;Host OSポート番号&gt;</span>
-<span class="err">end</span>
-</code></pre></div>
-</td></tr></table>
-<h3 id="forwarded_port">forwarded_port</h3>
-<p>ポートフォワーディングを設定する事を明示する値です。</p>
-<h3 id="guest">guest</h3>
-<p>VM上のポート番号を指定します。</p>
-<h3 id="host">host</h3>
-<p>Host OSから接続する際のポート番号を指定します。</p>
+<p>DiskSizeを55GBに設定します。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<p>DiskSizeの変更はOS(Box)やProviderによってはサポートされていない場合があります。<br />
+  Vagrantfileに当該の記述を行ってもDiskSizeが変更されない可能性がある事に注意してください。
+  (<code>freebsd/FreeBSD-10.2-RELEASE</code>のBoxでは変更可能を確認済み)</p>
+<h2 id="memorysize">MemorySize</h2>
+<p><code>vm.provider</code>に<code>virtualbox</code>を指定、ブロック内に<code>memory</code>を指定する事により、VMのMemorySizeを設定する事が出来ます。<br />
+なお、単位はMBとなります。</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 </div>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
-<span class="err">  config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</span>
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.provider &quot;virtualbox&quot; do |v|</span>
+<span class="err">    v.memory = 512</span>
+<span class="err">  end</span>
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
-<p>Host OSの<code>8080</code>ポートにアクセスがあった際、VMの<code>80</code>ポートに通信を転送します。</p>
+<p>MemorySizeを512MBに設定します。</p>
+<h2 id="cpu">CPUコア数</h2>
+<p><code>vm.provider</code>に<code>virtualbox</code>を指定、ブロック内に<code>cpus</code>を指定する事により、VMのCPUコア数を設定する事が出来ます。  </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+</div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
+<span class="err">  config.vm.provider &quot;virtualbox&quot; do |v|</span>
+<span class="err">    v.cpus = 2</span>
+<span class="err">  end</span>
+<span class="err">end</span>
+</code></pre></div>
+</td></tr></table>
+<p>CPUコア数を2に設定します。</p>
 <h2 id="reference">Reference</h2>
 <ul>
-<li><a href="https://www.vagrantup.com/docs/networking/basic_usage">Basic Usage - Networking | Vagrant by HashiCorp</a></li>
-<li><a href="https://labs.septeni.co.jp/entry/20140707/1404670069">Vagrantのネットワーク周りのあれこれ - Septeni Engineer's Blog</a></li>
+<li><a href="https://www.vagrantup.com/docs/vagrantfile/machine_settings">Machine Settings | Vagrant by HashiCorp</a></li>
+<li><a href="https://qiita.com/yut_h1979/items/c84c490053877beee5c1">Vagrantfileに一行書くだけでVMのディスク容量を増やす方法 | Qiita</a></li>
+<li><a href="https://www.vagrantup.com/docs/providers/virtualbox/configuration">Providers - VirtualBox - Configuration | Vagrant by HashiCorp</a></li>
 </ul>
                 
               
@@ -740,7 +644,7 @@ Host OSからVMに対するポートフォワーディングを行う事が出�
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../spec/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../vagrantfile/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -749,19 +653,19 @@ Host OSからVMに対するポートフォワーディングを行う事が出�
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                VMスペック
+                Vagrantfileとは
               </div>
             </div>
           </a>
         
         
-          <a href="../sync/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../network/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                ファイル共有
+                ネットワーク
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

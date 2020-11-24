@@ -323,6 +323,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../spec/" class="md-nav__link">
+      VMスペック
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../network/" class="md-nav__link">
       ネットワーク
     </a>
@@ -739,7 +751,7 @@ Vagrantの実行はvagrantユーザで行われるため、$HOMEには<code>/hom
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">Vagrant.configure(&quot;2&quot;) do |config|</span>
 <span class="err">  config.vm.provision &quot;shell&quot;,</span>
-<span class="err">    inline: &quot;cp /home/vagrant/.gitconfig $HOME/.gitconfig&quot;, privileged: true</span>
+<span class="err">    inline: &quot;&lt;実行したいコマンド&gt;&quot;, privileged: true</span>
 <span class="err">end</span>
 </code></pre></div>
 </td></tr></table>
@@ -783,9 +795,6 @@ VMではなくHost OS上のパスを指定する必要があることに注意�
 <h2 id="ansible">Ansible</h2>
 <p>Host OS上もしくはVM上でAnsibleを実行することが出来ます。<br />
 本項ではVM上でAnsibleを実行する手順を紹介します。</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-</div>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
