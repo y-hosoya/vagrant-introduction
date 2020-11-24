@@ -48,7 +48,7 @@ Vagrantの実行はvagrantユーザで行われるため、$HOMEには`/home/vag
 ```Vagrantfile
 Vagrant.configure("2") do |config|
   config.vm.provision "shell",
-    inline: "cp /home/vagrant/.gitconfig $HOME/.gitconfig", privileged: true
+    inline: "<実行したいコマンド>", privileged: true
 end
 ```
 
@@ -94,8 +94,6 @@ Host OSのVagrantfileが配置されているディレクトリに存在する`s
 
 Host OS上もしくはVM上でAnsibleを実行することが出来ます。  
 本項ではVM上でAnsibleを実行する手順を紹介します。
-
-!!!Example
 
 ```Vagrantfile
 Vagrant.configure("2") do |config|

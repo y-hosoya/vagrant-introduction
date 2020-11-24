@@ -9,7 +9,7 @@ Vagrantでは様々なOSの仮想マシンを作成することが出来ます�
 
 [Vagrant Cloud](https://app.vagrantup.com/boxes/search)から、任意のBoxを検索することが出来ます。
 
-### Exmaple
+### Example
 
 [準備](../preparation)で使用した**generic/centos8**のページを確認してみます。  
 [Vagrant box generic/centos8 - Vagrant Cloud](https://app.vagrantup.com/generic/boxes/centos8)
